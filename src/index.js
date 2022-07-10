@@ -8,7 +8,7 @@ import Home from "./pages/Home/Home";
 import Profile from "./pages/Profile/Profile";
 import AuthRedirect from "./pages/AuthRedirect/AuthRedirect";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
