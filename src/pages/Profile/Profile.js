@@ -20,6 +20,7 @@ function Profile() {
     const [shouts, setShouts] = useState(null);
     const [lastIndex, setLastIndex] = useState(5);
     const [shoutsLoading, setShoutsLoading] = useState(true);
+    const [revealEmail, setRevealEmail] = useState(false);
 
     const seeShouts = async () => {
         setShoutsLoading(true);
@@ -57,39 +58,54 @@ function Profile() {
         <MainLayout>
             {user ?
                 <div className="profile">
+                    <h1 className="title">Profile</h1>
                     <>
                         <div className="profile-info-box">
                             <div className="top-box">
                                 <img src={user.user_metadata.avatar_url} alt="profile" className="profile-image" />
-                                <p className="profile-tag">{user.user_metadata.name}</p>
+                                <div className="data-group">
+                                    <p className="profile-tag">{user.user_metadata.name}</p>
+                                    <p className="profile-info-field">{user.id}</p>
+                                </div>
                             </div>
                             <div className="bottom-box">
-                                <label className="profile-label">Email: </label>
-                                <p className="profile-info-field">{user.user_metadata.email}</p>
-                                <label className="profile-label">Email verified: </label>
-                                <p className="profile-info-field">{user.user_metadata.email_verified ? <span className="green-tag"><GoVerified /> Verified</span> : <span className="red-tag"><GoUnverified /> Unverified</span>}</p>
-                                <label className="profile-label">Username: </label>
-                                <p className="profile-info-field">{user.user_metadata.full_name}</p>
+                                <div className="info-box">
+                                    <label className="profile-label">USERNAME</label>
+                                    <p className="profile-info-field">{user.user_metadata.full_name}</p>
+                                </div>
+                                <div className="info-box email-box">
+                                    <div className="typo-group">
+                                        <label className="profile-label">EMAIL</label>
+                                        <p className="profile-info-field">{revealEmail ? user.user_metadata.email : "*******************"}</p>
+                                    </div>
+                                    <button className="reveal-button" onClick={() => setRevealEmail(!revealEmail)}>{revealEmail ? "Hide" : "Reveal"}</button>
+                                </div>
+                                <div className="info-box">
+                                    <label className="profile-label">VERIFIED</label>
+                                    <p className="profile-info-field">{user.user_metadata.email_verified ? <span className="green-tag"><GoVerified /> Verified</span> : <span className="red-tag"><GoUnverified /> Unverified</span>}</p>
+                                </div>
                             </div>
                         </div>
-                        <h1 className="profile-posts-title">Shouted opinions: </h1>
+                        <h1 className="title opinions-title">Shouted opinions: </h1>
                         {shoutsLoading ?
-                            <ReactLoading type="bubbles" color="red" />
+                            <ReactLoading type="spin" color="red" />
                             :
                             <>
                                 {shouts ?
                                     <>
-                                        <p className="shout-count">Shouts found: {shouts.length}</p>
-                                        {shouts.map((shout, index) => {
-                                            if (index < lastIndex) {
-                                                return <ShoutBox shout={shout} key={index} />
-                                            }
-                                            else {
-                                                return <></>
-                                            }
-                                        })}
+                                        <p className="shout-count">Shouts found: <span className="shouts-amount">{shouts.length}</span></p>
+                                        <ul className="shouts-list">
+                                            {shouts.map((shout, index) => {
+                                                if (index < lastIndex) {
+                                                    return <ShoutBox shout={shout} key={index} />
+                                                }
+                                                else {
+                                                    return <></>
+                                                }
+                                            })}
+                                        </ul>
                                         {shouts.length > lastIndex ?
-                                            <button className="show-more-btn" onClick={shoutMore}>Show more</button>
+                                            <button className="show-btn" onClick={shoutMore}>Show more</button>
                                             :
                                             <></>
                                         }

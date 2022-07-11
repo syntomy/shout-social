@@ -69,6 +69,7 @@
     text-decoration:none;
     width:100%;
     text-align:start;
+    font-weight:bold;
 }
 .sidebar .action-button
 {
@@ -82,13 +83,6 @@
     align-items:center;
     justify-content:flex-start;
     margin-left:16px;
-}
-.sidebar .discord-server
-{
-    position:absolute;
-    bottom:10px;
-    color:white;
-    text-decoration:none;
     font-weight:bold;
 }
 .mobile-bar
@@ -186,6 +180,51 @@
 .icon-right-space
 {
     margin-right:10px;
+}
+.shout-modal .modal-content
+{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction:column;
+}
+.shout-modal .shout-text
+{
+    width:100%;
+    height:120px;
+    resize:none;
+    margin-top:10px;
+    border:1px solid #2004041c;
+    border-radius:5px;
+    padding:10px;
+    font-weight:bold;
+}
+.shout-modal .shout-button
+{
+    border:none;
+    color:white;
+    background:#171717;
+    font-weight:bold;
+    padding:10px 40px;
+    font-size:16px;
+    border-radius:5px;
+    margin-top:10px;
+    cursor:pointer;
+}
+.socials
+{
+    display:flex;
+    align-items:center;
+    justify-content:space-around;
+    width:100px;
+    position:absolute;
+    bottom:10px;
+}
+.social-link
+{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
 }
 
 @media only screen and (max-width:600px) {

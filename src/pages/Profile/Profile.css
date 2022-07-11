@@ -1,0 +1,102 @@
+.profile
+{
+    margin-top:20px;
+}
+.title
+{
+    font-weight:900;
+}
+.title::before
+{
+  content:"#";
+  margin-right:10px;
+  font-style:italic;
+  color:#444444;
+  font-size:25px;
+}
+.show-btn
+{
+  border:none;
+  background:transparent;
+  cursor:pointer;
+  color:#DA0037;
+  margin:10px 0px;
+}
+.shouts-list
+{
+    margin-bottom:20px;
+}
+.opinions-title
+{
+    margin-top:20px;
+}
+.shout-count
+{
+  font-weight:300;
+  font-style:italic;
+}
+.shouts-amount
+{
+  font-weight:bold;
+  font-style:normal;
+}
+.profile-info-box
+{
+    background:#EDEDED;
+    margin-right:30px;
+    border-radius:5px;
+    border:2px solid #2004041c;
+    padding:20px;
+    display:flex;
+    align-items:center;
+}
+.top-box
+{
+    display:flex;
+    align-items:center;
+    justify-content:flex-start;
+    flex:2;
+}
+.data-group
+{
+    display:flex;
+    align-items:flex-start;
+    justify-content:center;
+    flex-direction:column;
+    margin-left:20px;
+}
+.data-group > *
+{
+    margin-top:10px;
+}
+.profile-image
+{
+    border-radius:100%;
+    border:4px solid #171717;
+}
+.profile-tag
+{
+    font-weight:600;
+}
+.bottom-box
+{
+    flex:2;
+}
+.profile-label
+{
+    font-weight:bold;
+    color:#444444;
+}
+.email-box
+{
+    display:flex;
+    align-items:center;
+}
+.reveal-button
+{
+    margin-left:20px;
+    border:none;
+    color:dodgerblue;
+    font-weight:bold;
+    cursor:pointer;
+}

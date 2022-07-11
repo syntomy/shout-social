@@ -8,6 +8,7 @@ import { toast } from "react-toastify";
 import ReactLoading from "react-loading";
 
 import { BiRefresh } from "react-icons/bi";
+import { IoIosCheckmarkCircleOutline } from "react-icons/io";
 
 import ShoutBox from "../../Components/ShoutBox/ShoutBox";
 
@@ -50,14 +51,18 @@ function Home() {
   return (
     <MainLayout>
       {loading ?
-        <ReactLoading type="balls" color="red" />
+        <div className="loading-screen">
+          <ReactLoading type="spin" color="red" />
+        </div>
         :
-        <>
+        <div className="home-page">
+          <h1 className="title">The Forbidden Wall</h1>
           {shouts ?
             <>
-              <h1>Public wall: </h1>
-              <div>Shouts found: {shouts.length}</div>
-              <button className="refresh-button" onClick={fetchShouts}><BiRefresh /> Refresh</button>
+              <div className="shouts-actions">
+                <button className="refresh-button" onClick={fetchShouts}><BiRefresh /> Refresh</button>
+                <div className="shouts-found">Shouts found: <span className="shouts-amount">{shouts.length}</span></div>
+              </div>
               {shouts.map((shout, index) => {
                 if(index < stopIndex)
                 {
@@ -69,13 +74,13 @@ function Home() {
               {shouts.length > stopIndex ?
               <button className="show-btn" onClick={showMore}>Show more</button>
               :
-              <p className="loaded-message">Loaded all shouts</p>
+              <p className="loaded-message"><IoIosCheckmarkCircleOutline /> congrats you heard every opinion you are now labelled as "the guy who asked"</p>
               }
             </>
             :
             <h1>No one has shouted anything yet!</h1>
           }
-        </>
+        </div>
       }
     </MainLayout>
   );

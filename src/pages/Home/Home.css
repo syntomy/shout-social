@@ -1,38 +1,65 @@
-.App {
-  text-align: center;
+.loading-screen
+{
+  position:absolute;
+  left:50%;
+  top:50%;
+  transform: translate(-50%, -50%);
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.home-page
+{
+  margin-top:20px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.home-page .title
+{
+  font-weight:900;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.home-page .title::before
+{
+  content:"#";
+  margin-right:10px;
+  font-style:italic;
+  color:#444444;
+  font-size:25px;
 }
-
-.App-link {
-  color: #61dafb;
+.shouts-actions
+{
+  display:flex;
+  align-items:center;
+  justify-content:flex-start;
+  margin:10px 0px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.refresh-button
+{
+  border:none;
+  color:white;
+  padding:5px 10px;
+  background:#171717;
+  border-radius:5px;
+  font-weight:bold;
+  cursor:pointer;
+  margin-right:20px;
+}
+.shouts-found
+{
+  font-weight:300;
+  font-style:italic;
+}
+.shouts-amount
+{
+  font-weight:bold;
+  font-style:normal;
+}
+.show-btn
+{
+  border:none;
+  background:transparent;
+  cursor:pointer;
+  color:#DA0037;
+  margin:10px 0px;
+}
+.loaded-message
+{
+  font-weight:300;
+  margin:10px 0px;
+  font-size:20px;
 }

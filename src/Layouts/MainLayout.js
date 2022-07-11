@@ -8,7 +8,7 @@ import { AiFillHome } from "react-icons/ai";
 import { BsFillPersonFill } from "react-icons/bs";
 import { RiAccountCircleFill } from "react-icons/ri";
 import { MdExitToApp } from "react-icons/md";
-import { FaDiscord } from "react-icons/fa";
+import { FaDiscord, FaInstagram, FaTwitter } from "react-icons/fa";
 
 import { User } from "../GlobalState/UserState";
 import { SupabaseClient } from "../supabaseClient";
@@ -131,7 +131,11 @@ function MainLayout({ children }) {
                             </>
                         }
                     </ul>
-                    <a className="discord-server" href="https://discord.gg/e63S7U9ans" rel="noopener" target="_blank">💙 Discord Server 💙</a>
+                    <div className="socials">
+                        <a className="social-link" href="https://discord.gg/e63S7U9ans" rel="noreferrer" target="_blank"><FaDiscord /></a>
+                        <a className="social-link" href="https://www.instagram.com/syngottasin" rel="noreferrer" target="_blank"><FaInstagram /></a>
+                        <a className="social-link" href="https://www.twitter.com/snytomy" rel="noreferrer" target="_blank"><FaTwitter    /></a>
+                    </div>
                 </div>
             </div>
             <div className="mobile-bar">
@@ -149,7 +153,7 @@ function MainLayout({ children }) {
                                 <li className="action"><button className="action-button" onClick={openAuthModal}><RiAccountCircleFill /></button></li>
                             </>
                         }
-                        <li className="action"><button className="action-button"><a className="action-link" rel="noopener" href="https://discord.gg/e63S7U9ans" target="_blank"><FaDiscord /></a></button></li>
+                        <li className="action"><button className="action-button"><a className="action-link" rel="noreferrer" href="https://discord.gg/e63S7U9ans" target="_blank"><FaDiscord /></a></button></li>
                     </ul>
                 </div>
             </div>
@@ -209,7 +213,7 @@ function MainLayout({ children }) {
                                 <button className="close-button" onClick={closeShoutModal}>X</button>
                             </div>
                             <div className="modal-content">
-                                <textarea minLength={5} maxLength={500} className="shout-text" value={shoutContent} onChange={(e) => setShout(e.target.value)} />
+                                <textarea minLength={5} placeholder="what do you wanna tell everyone" maxLength={500} className="shout-text" value={shoutContent} onChange={(e) => setShout(e.target.value)} />
                                 <button className="shout-button" onClick={shoutPost}>Shout it</button>
                             </div>
                         </>
