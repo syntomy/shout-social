@@ -1,5 +1,5 @@
 import "./MainLayout.css";
-import { Link, useSearchParams } from "react-router-dom";
+import { Link, useSearchParams, useNavigate } from "react-router-dom";
 
 import { useState, useEffect } from "react";
 
@@ -23,6 +23,7 @@ Modal.setAppElement('#root');
 
 function MainLayout({ children }) {
     const [query, setQuery] = useSearchParams();
+    const navigate = useNavigate();
 
     const [authModalIsOpen, setAuthModal] = useState(false);
     const [shoutModalIsOpen, setShoutModal] = useState(false);
@@ -46,6 +47,9 @@ function MainLayout({ children }) {
         else {
             toast.success("Logged out successfully!");
             User.set(null);
+            setTimeout(() => {
+                navigate("/");
+            }, 2000)
         }
     };
 

@@ -10,7 +10,7 @@ const AuthRedirect = () => {
 
     return (
         <>
-            <ReactLoading type="bubbles" color="green"/>
+            <ReactLoading type="bubbles" color="red"/>
             <div>logging you in..........</div>
         </>
     )
