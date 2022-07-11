@@ -79,6 +79,7 @@ function Profile() {
                             <>
                                 {shouts ?
                                     <>
+                                        <p className="shout-count">Shouts found: {shouts.length}</p>
                                         {shouts.map((shout, index) => {
                                             if (index < lastIndex) {
                                                 return <ShoutBox shout={shout} key={index} />

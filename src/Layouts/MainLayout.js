@@ -113,23 +113,43 @@ function MainLayout({ children }) {
         <div className="app">
             <div className="sidebar">
                 <div className="top-area">
-                    <h1 className="logo">Shout</h1>
+                    <h1 className="logo">shout</h1>
                     <p className="small-credits">by syntomy#0007</p>
                 </div>
                 <div className="actions-area">
                     <ul className="actions-list">
-                        <li className="action"><Link to="/"><AiFillHome /> Home</Link></li>
+                        <li className="action"><button className="action-button"><Link to="/" className="action-link"><AiFillHome className="icon-right-space" /> Home</Link></button></li>
                         {user ?
                             <>
-                                <li className="action"><Link to="/profile"><BsFillPersonFill /> Profile</Link></li>
-                                <li className="action"><button className="shout-button" onClick={openShoutModal}><IoMdCreate /> Shout an opinion</button></li>
-                                <li className="action"><button className="logout-btn" onClick={logout}><MdExitToApp /> Logout</button></li>
+                                <li className="action"><button className="action-button"><Link to="/profile" className="action-link"><BsFillPersonFill className="icon-right-space" /> Profile</Link></button></li>
+                                <li className="action"><button className="action-button" onClick={openShoutModal}><IoMdCreate className="icon-right-space" /> Shout an opinion</button></li>
+                                <li className="action"><button className="action-button" onClick={logout}><MdExitToApp className="icon-right-space" /> Logout</button></li>
                             </>
                             :
                             <>
-                                <li className="action"><button className="auth-button" onClick={openAuthModal}><RiAccountCircleFill /> Signup / Login</button></li>
+                                <li className="action"><button className="action-button" onClick={openAuthModal}><RiAccountCircleFill className="icon-right-space" /> Signup / Login</button></li>
                             </>
                         }
+                    </ul>
+                    <a className="discord-server" href="https://discord.gg/e63S7U9ans" rel="noopener" target="_blank">💙 Discord Server 💙</a>
+                </div>
+            </div>
+            <div className="mobile-bar">
+                <div className="actions-area">
+                    <ul className="actions-list">
+                        <li className="action"><button className="action-button"><Link to="/" className="action-link"><AiFillHome /></Link></button></li>
+                        {user ?
+                            <>
+                                <li className="action"><button className="action-button"><Link to="/profile" className="action-link"><BsFillPersonFill /></Link></button></li>
+                                <li className="action"><button className="action-button" onClick={openShoutModal}><IoMdCreate /></button></li>
+                                <li className="action"><button className="action-button" onClick={logout}><MdExitToApp /></button></li>
+                            </>
+                            :
+                            <>
+                                <li className="action"><button className="action-button" onClick={openAuthModal}><RiAccountCircleFill /></button></li>
+                            </>
+                        }
+                        <li className="action"><button className="action-button"><a className="action-link" rel="noopener" href="https://discord.gg/e63S7U9ans" target="_blank"><FaDiscord /></a></button></li>
                     </ul>
                 </div>
             </div>
@@ -156,9 +176,9 @@ function MainLayout({ children }) {
                         </div>
                         <button className="close-button" onClick={closeAuthModal}>X</button>
                     </div>
-                </div>
-                <div className="modal-content">
-                    <button className="discord-button" onClick={signIn}><FaDiscord /> Continue with discord</button>
+                    <div className="modal-content">
+                        <button className="discord-button" onClick={signIn}><FaDiscord className="icon-right-space" /> <div>Continue with discord</div></button>
+                    </div>
                 </div>
             </Modal>
             <Modal
@@ -200,7 +220,7 @@ function MainLayout({ children }) {
                 {children}
             </div>
             <ToastContainer
-                position="bottom-left"
+                position="bottom-right"
             />
         </div>
     )
