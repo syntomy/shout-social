@@ -86,14 +86,14 @@ function Profile() {
                                 </div>
                             </div>
                         </div>
-                        <h1 className="title opinions-title">Shared opinions: </h1>
+                        <h1 className="title opinions-title">Shared thoughts: </h1>
                         {shoutsLoading ?
                             <ReactLoading type="spin" color="red" />
                             :
                             <>
                                 {shouts ?
                                     <>
-                                        <p className="shout-count">Opinions found: <span className="shouts-amount">{shouts.length}</span></p>
+                                        <p className="shout-count">Found: <span className="shouts-amount">{shouts.length}</span></p>
                                         <ul className="shouts-list">
                                             {shouts.map((shout, index) => {
                                                 if (index < lastIndex) {

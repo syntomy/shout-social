@@ -213,8 +213,8 @@ function MainLayout({ children }) {
                         <>
                             <div className="top-bar">
                                 <div className="typography">
-                                    <h2>Shout an opinion</h2>
-                                    <p>you can shout out an opinion publicly so everybody can see it</p>
+                                    <h2>Shout something</h2>
+                                    <p>you can shout out something publicly so everybody can see it</p>
                                 </div>
                                 <button className="close-button" onClick={closeShoutModal}>X</button>
                             </div>
