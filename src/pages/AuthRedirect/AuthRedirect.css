@@ -20,3 +20,10 @@
     margin-bottom:20px;
     color:green;
 }
+@media only screen and (max-width:500px)
+{
+    .redirect-page
+    {
+        font-size:15px;
+    }
+}
