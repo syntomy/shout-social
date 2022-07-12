@@ -100,7 +100,7 @@ function Home() {
               {shouts.length > stopIndex ?
                 <button className="show-btn" onClick={showMore}>Show more</button>
                 :
-                <p className="loaded-message"><IoIosCheckmarkCircleOutline /> congrats you saw every opinion you are now labelled as "the guy/gal who asked"</p>
+                <p className="loaded-message"><IoIosCheckmarkCircleOutline /> congrats you saw everything you are now labelled as "the guy/gal who asked"</p>
               }
             </>
             :
