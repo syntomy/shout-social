@@ -86,7 +86,7 @@ function Profile() {
                                 </div>
                             </div>
                         </div>
-                        <h1 className="title opinions-title">Shouted opinions: </h1>
+                        <h1 className="title opinions-title">Shared opinions: </h1>
                         {shoutsLoading ?
                             <ReactLoading type="spin" color="red" />
                             :
