@@ -259,3 +259,10 @@
         font-size:15px;
     }
 }
+@media only screen and (max-width:320px)
+{
+    .mobile-bar .action
+    {
+        margin:0 3px;
+    }
+}

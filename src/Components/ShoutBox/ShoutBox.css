@@ -16,6 +16,7 @@
     justify-content:center;
     flex-direction:column;
     margin-left:20px;
+    width:calc(100% - 70px);
 }
 .shouter-avatar
 {
@@ -44,11 +45,55 @@
 .shout-content
 {
     margin-top:10px;
+    word-wrap:break-word;
+    width:100%;
 }
 @media only screen and (max-width:700px)
 {
     .creation-date
     {
         font-size:15px;
+    }
+}
+@media only screen and (max-width:500px)
+{
+    .creation-date
+    {
+        font-size:10px;
+    }
+    .top-section > *
+    {
+        margin-right:5px;
+    }
+    .shouter-info
+    {
+        margin-left:10px;
+    }
+    .shout-box
+    {
+        padding:10px;
+    }
+    .shout-content
+    {
+        margin-top:5px;
+    }
+}
+@media only screen and (max-width:320px)
+{
+    .shouter-avatar
+    {
+        display:none;
+    }
+    .shouter-info
+    {
+        width: calc(100% - 10px);
+    }
+    .shouter-tag
+    {
+        font-size:15px;
+    }
+    .creation-date
+    {
+        font-size:10px;
     }
 }

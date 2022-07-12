@@ -120,3 +120,45 @@
     font-size:15px;
   }
 }
+@media only screen and (max-width:500px)
+{
+  .announcement-box .announcement-text
+  {
+    font-size:18px;
+  }
+  .title
+  {
+    font-size:25px;
+  }
+}
+@media only screen and (max-width:400px)
+{
+  .announcement-box .announcement-text
+  {
+    font-size:16px;
+  }
+}
+@media only screen and (max-width:320px)
+{
+  .announcement-box .announcement-text
+  {
+    font-size:12px;
+  }
+  .announcement-box .announcement-avatar
+  {
+    width:80px;
+    height:80px;
+  }
+  .announcement-box .caption
+  {
+    font-size:10px;
+  }
+  .title
+  {
+    font-size:20px;
+  }
+  .title::before
+  {
+    font-size:15px !important;
+  }
+}

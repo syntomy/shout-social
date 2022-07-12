@@ -86,7 +86,7 @@ function Home() {
           <h1 className="title">The Forbidden Wall</h1>
           <div className="shouts-actions">
             <button className="refresh-button" onClick={fetchShouts}><BiRefresh /> Refresh</button>
-            {shouts ? <div className="shouts-found">Shouts found: <span className="shouts-amount">{shouts.length}</span></div> : ""}
+            {shouts ? <div className="shouts-found">Opinions found: <span className="shouts-amount">{shouts.length}</span></div> : ""}
           </div>
           {shouts ?
             <>

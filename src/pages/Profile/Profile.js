@@ -93,7 +93,7 @@ function Profile() {
                             <>
                                 {shouts ?
                                     <>
-                                        <p className="shout-count">Shouts found: <span className="shouts-amount">{shouts.length}</span></p>
+                                        <p className="shout-count">Opinions found: <span className="shouts-amount">{shouts.length}</span></p>
                                         <ul className="shouts-list">
                                             {shouts.map((shout, index) => {
                                                 if (index < lastIndex) {
