@@ -71,6 +71,12 @@ function MainLayout({ children }) {
             else
             {
                 toast.success("Posted your shout successfully!");
+                const shoutAudio = new Audio("/AHH.mp3");
+                shoutAudio.play();
+                setTimeout(() => {
+                    shoutAudio.pause();
+                    shoutAudio.remove();
+                }, 2000)
             }
             setShoutModalLoading(false);
             setShout("");
