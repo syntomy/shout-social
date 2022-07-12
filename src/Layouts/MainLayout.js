@@ -139,7 +139,7 @@ function MainLayout({ children }) {
                     </ul>
                     <div className="socials">
                         <a className="social-link" href="https://discord.gg/e63S7U9ans" rel="noreferrer" target="_blank"><FaDiscord /></a>
-                        <a className="social-link" href="https://www.instagram.com/syngottasin" rel="noreferrer" target="_blank"><FaInstagram /></a>
+                        {/* <a className="social-link" href="https://www.instagram.com/syngottasin" rel="noreferrer" target="_blank"><FaInstagram /></a> */}
                         <a className="social-link" href="https://www.twitter.com/snytomy" rel="noreferrer" target="_blank"><FaTwitter    /></a>
                     </div>
                 </div>
