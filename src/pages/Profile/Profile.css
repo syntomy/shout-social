@@ -43,7 +43,6 @@
 .profile-info-box
 {
     background:#EDEDED;
-    margin-right:30px;
     border-radius:5px;
     border:2px solid #2004041c;
     padding:20px;
@@ -98,5 +97,41 @@
     border:none;
     color:dodgerblue;
     font-weight:bold;
+    background:transparent;
     cursor:pointer;
+}
+
+@media only screen and (max-width:900px)
+{
+    .profile-info-box
+    {
+        flex-direction:column;
+    }
+    .top-box
+    {
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+        width:100%;
+    }
+    .data-group
+    {
+        text-align:center;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+    }
+    .bottom-box
+    {
+        background:white;
+        padding:15px;
+        border-radius:5px;
+        margin-top:20px;
+        border:2px solid #2004041c;
+        width:100%;
+    }
+    .reveal-button
+    {
+        margin-left:auto;
+    }
 }

@@ -111,7 +111,7 @@ function Profile() {
                                         }
                                     </>
                                     :
-                                    <p className="No shouts">You have not shouted any opinions yet!</p>
+                                    <p>you didn't share anything yet</p>
                                 }
                             </>
                         }
