@@ -128,7 +128,7 @@ function MainLayout({ children }) {
                         {user ?
                             <>
                                 <li className="action"><button className="action-button"><Link to="/profile" className="action-link"><BsFillPersonFill className="icon-right-space" /> Profile</Link></button></li>
-                                <li className="action"><button className="action-button" onClick={openShoutModal}><IoMdCreate className="icon-right-space" /> Shout an opinion</button></li>
+                                <li className="action"><button className="action-button" onClick={openShoutModal}><IoMdCreate className="icon-right-space" /> Shout</button></li>
                                 <li className="action"><button className="action-button" onClick={logout}><MdExitToApp className="icon-right-space" /> Logout</button></li>
                             </>
                             :
