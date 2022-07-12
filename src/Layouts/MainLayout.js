@@ -35,7 +35,7 @@ function MainLayout({ children }) {
     const signIn = async () => {
         await SupabaseClient.auth.signIn({
             provider: "discord"
-        }, { redirectTo: "http://localhost:3000/auth/redirect" });
+        }, { redirectTo: "https://www.shoutsocial.ga/auth/redirect" });
     };
 
     const logout = async () => {
